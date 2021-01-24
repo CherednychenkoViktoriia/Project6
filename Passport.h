@@ -32,7 +32,17 @@ public:
 
 	Passport(Passport&& other) = delete;
 
-	Passport& operator=(const Passport& other) = delete;
+	Passport& operator=(const Passport& other) 
+	{
+		std::cout << "Passport& operator=(const Passport& other)\n";
+		m_name = other.m_name;
+		m_dateOfBirth = other.m_dateOfBirth;
+		m_nationality = other.m_nationality;
+		m_dateOfIssue = other.m_dateOfIssue;
+		m_authority = other.m_authority;
+		m_RNTRC = other.m_RNTRC;
+		return *this;
+	}
 	
 	Passport& operator=( Passport&& other) = delete;
 

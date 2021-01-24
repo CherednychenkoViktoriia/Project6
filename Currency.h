@@ -15,7 +15,14 @@ public:
 
 	Currency(const Currency& other) = delete;
 
-	Currency(Currency&& other) = delete;
+	Currency(Currency&& other) noexcept
+	{
+		std::cout << "Currency(Currency&& other)\n";
+		m_hryvnia = other.m_hryvnia;
+		m_kopeck = other.m_kopeck;
+		other.m_hryvnia = 0;
+		other.m_kopeck = 0;
+	}
 
 	Currency& operator=(const Currency& other) = delete;
 
