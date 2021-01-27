@@ -139,7 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Project6.cpp" />
+    <ClCompile Include="Currency.cpp" />
+    <ClCompile Include="Passport.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Reference.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Currency.h" />
+    <ClInclude Include="Passport.h" />
+    <ClInclude Include="Reference.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
